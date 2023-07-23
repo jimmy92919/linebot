@@ -11,7 +11,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 app = Flask(__name__)
 
-weather_api_key = "c69bb80cbc3a9fd39ad8ca79ec515c1d"
+weather_api_key = "your api key"
 
 
 def get_weather(city):
@@ -34,8 +34,8 @@ def linebot():
     body = request.get_data(as_text=True)                    # 取得收到的訊息內容
     try:
         json_data = json.loads(body)                         # json 格式化訊息內容
-        access_token = 'fRaRaVF+fn0QkrR+qFo5hitLswTUc6zRAbo+vJ3lLPliO3Ya41lwSaMlPJkUkO3qBkJX1bM1bA4E0ZAATc6RcJ9H2TDteoxiukdtiA3lUK5C9wU7cUpW+xqIPN2nq38NPDgLSb1Txr1uyOEp8622qAdB04t89/1O/w1cDnyilFU='
-        secret = 'f7dc1e76d72ce227298061769156efc1'
+        access_token = 'your line token'
+        secret = 'your channel secret'
         line_bot_api = LineBotApi(access_token)              # 確認 token 是否正確
         handler = WebhookHandler(secret)                     # 確認 secret 是否正確
         signature = request.headers['X-Line-Signature']      # 加入回傳的 headers
