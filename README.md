@@ -1,1 +1,3 @@
 用來查詢天氣的linebot
+
+得使用ngrok來讓外網連接你的API喔
